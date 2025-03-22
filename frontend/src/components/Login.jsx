@@ -13,7 +13,7 @@ const Login = () => {
     async function submit(e) {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/login',{email,password});
+            const response = await axios.post('https://full-backend-psi.vercel.app/login',{email,password});
             console.log(response.data);
             setrich(response.data.message);
             settype(response.data.type);
